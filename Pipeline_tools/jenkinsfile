@@ -6,13 +6,7 @@ pipeline {
             steps {
                 sh "echo $USER"
                 sh 'docker version'
-            }
-        }
-        stage('Checkout') {
-            steps{
-                git branch: 'main',
-                    url: 'https://github.com/HeathOne/project_test.git'        
-                }
+               }
         }
         stage("create") {
             steps {
