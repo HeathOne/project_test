@@ -12,5 +12,5 @@ RUN python3 -m venv my_env
 COPY main.py /main.py
 
 CMD ["cd", " environments"]
-CMD ["python3", "hello.py"]
+CMD ["python3", "main.py"]
 
