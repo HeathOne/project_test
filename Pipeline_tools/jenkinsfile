@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Test') {
             steps{
-                dir('lesson-1') {
+                dir('Docker_tools') {
                     sh "ls -la "
                     sh "pwd"
                 }
