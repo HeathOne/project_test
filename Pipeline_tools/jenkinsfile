@@ -11,7 +11,7 @@ pipeline {
         stage("create") {
             steps {
                 echo "=====start build======"
-                dir ('/Docker_tools') {
+                dir ('/Docker_tools/') {
                     sh 'docker build . -t pira7 '
                 }
             }
