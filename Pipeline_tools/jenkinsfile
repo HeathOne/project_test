@@ -8,15 +8,13 @@ pipeline {
                 sh 'docker version'
             }
         }
-    stages {
         stage('create') {
-            steps{
+            steps {
                 echo '=====start build======'
-                dir ('/Docker_tools'){
+                dir ('/Docker_tools') {
                     sh 'docker build -t pira7 '
                 }
-            } 
+            }
         }
-    }
-}
+   }
 }
