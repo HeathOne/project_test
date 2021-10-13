@@ -9,8 +9,8 @@ RUN mkdir environments
 RUN cd environments
 RUN python3 -m venv my_env
 
-COPY main.py /main.py
+COPY testing.py /testing.py
 
 CMD ["cd", " environments"]
-CMD ["python3", "main.py"]
+CMD ["python3", "testing.py"]
 
