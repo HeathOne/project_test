@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps{
                 git branch: 'main',
-                    url: 'https://github.com/bakavets/docker-lessons.git'        
+                    url: 'https://github.com/HeathOne/project_test.git'        
                 }
         }
         stage("create") {
