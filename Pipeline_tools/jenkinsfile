@@ -14,6 +14,12 @@ pipeline {
                 deleteDir()
             }
         }
+        stage('Checkout') {
+            steps{
+                git branch: 'main',
+                    url: 'https://github.com/HeathOne/project_test.git'        
+                }
+        }
         stage('Test') {
             steps{
                 dir('Docker_tools') {
@@ -23,12 +29,6 @@ pipeline {
                     sh "ls -la "
                     sh "pwd"
             }
-        }
-        stage('Checkout') {
-            steps{
-                git branch: 'main',
-                    url: 'https://github.com/bakavets/docker-lessons.git'        
-                }
         }
         stage("create") {
             steps {
