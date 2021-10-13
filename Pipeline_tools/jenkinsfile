@@ -2,10 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('THIS IS MY PIPELINE') {
+        stage('Docker version') {
             steps {
-                echo 'Hello World'
+                sh "echo $USER"
+                sh 'docker version'
             }
         }
+    stages{
+        stage('create'){
+            steps{
+                echo '=====start build======'
+                dir ('/Docker_tools'){
+                    sh 'docker build -t pira7 '
+                }
+            } 
+        }
     }
+}
 }
