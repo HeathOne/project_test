@@ -9,15 +9,3 @@ pipeline {
         }
     }
 }
-
-pipeline {
-    agent any
-
-    stages {
-        stage('THIS IS MY PIPELINE') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-    }
-}
