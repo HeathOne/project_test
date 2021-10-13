@@ -24,6 +24,12 @@ pipeline {
                     sh "pwd"
             }
         }
+        stage('Checkout') {
+            steps{
+                git branch: 'main',
+                    url: 'https://github.com/bakavets/docker-lessons.git'        
+                }
+        }
         stage("create") {
             steps {
                 echo "=====start build======"
