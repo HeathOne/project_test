@@ -35,6 +35,8 @@ pipeline {
                 echo "=====start build======"
                 dir ('Docker_tools') {
                     sh 'docker build . -t pira7 '
+             }
+        }        
         stage("run") {
              steps {
                     sh 'docker run pira7'
